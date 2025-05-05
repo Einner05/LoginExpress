@@ -8,7 +8,7 @@ const login= async (req, res) => {
     try {
     const [results, fields] = await connection.query(
         "SELECT * FROM `usuarios` WHERE `usuario`= ?",
-        [datos.usuario]
+        [datos.usuario, hash]
     );
     console.log(bcrypt.hashSync(datos.clave, saltRounds));
     if (results.length > 0 && bcrypt.compareSync(datos.clave, results[0].clave)) {

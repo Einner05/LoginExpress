@@ -18,6 +18,7 @@ const obtenerUsuarios = async(req,res)=>{
         console.log(err);
         res.status(500).send('Error en el servidor')
     }
+    
 }
 const eliminarUsuarios = async(req,res)=>{
     if (!req.session.usuario){

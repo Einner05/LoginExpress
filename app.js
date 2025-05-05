@@ -13,6 +13,7 @@ const { obtenerUsuarios, eliminarUsuarios } = require("./usuarios");
 const validar = require("./validar");
 const saltRounds = 10;
 
+
 app.use(
   cors({
     origin: "http//:localhost:5178",

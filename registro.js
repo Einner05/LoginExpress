@@ -23,6 +23,7 @@ const registro = async (req, res) => {
         res.status(401).send("No se pudo registrar");
     }
 
+    
     console.log(results); // results contains rows returned by server
     console.log(fields); // fields contains extra meta data about results, if available
 } catch (err) {
